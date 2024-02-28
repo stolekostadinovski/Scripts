@@ -38,7 +38,8 @@ while [ $SECONDS -lt $end ]; do
 done
 
 # Calculate and print max, min, and average CPU usage
-# Adding a line for testing 
+# Adding a line for testing
+# and anotherone 
 max_cpu=$(printf "%s\n" "${cpu_usages[@]}" | sort -nr | head -n 1)
 min_cpu=$(printf "%s\n" "${cpu_usages[@]}" | sort -n | head -n 1)
 avg_cpu=$(echo "${cpu_usages[@]}" | tr ' ' '\n' | awk '{sum+=$1} END {print sum/NR}')
